@@ -1,7 +1,7 @@
 
-
+CFLAGS= -g
 (ALL): *
-	gcc usaFilaDePrioridade.c
+	gcc ${CFLAGS} usaFilaDePrioridade.c
 	./a.out > output
-	diff output saida
+	sdiff -w 200 output saida
 	
